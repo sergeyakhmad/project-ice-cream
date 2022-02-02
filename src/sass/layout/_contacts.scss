@@ -19,7 +19,7 @@
 }
 
 .contacts-list-item:not(:last-child) {
-    margin-bottom: 50px;
+    margin-bottom: 25px;
 }
 
 .contacts-title {
@@ -83,15 +83,14 @@
     color: #907E82;
 }
 
-.contacts-tel::before {
-    position: absolute;
-    left: 1px;
-    content: '';
-    width: 179px;
-    height: 0px;
-    border: 1px solid #E1E1E1;
-}
-
+// .contacts-tel::before {
+//     position: absolute;
+//     left: 1px;
+//     content: '';
+//     width: 179px;
+//     height: 0px;
+//     border: 1px solid #E1E1E1;
+// }
 .contacts-mail {
     font-family: DM Sans;
     font-style: normal;
