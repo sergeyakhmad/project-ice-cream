@@ -11,10 +11,11 @@
   background-color: #ffb8ca;
   position: relative;
   z-index: 10;
+  position: absolute;
+  background-color: transparent;
+  width: 100%;
 
   @media screen and (min-width: 768px) {
-    position: absolute;
-    background-color: transparent;
     padding-top: 38px;
     padding-bottom: 0;
     z-index: 10;
@@ -136,12 +137,12 @@
     height: 44px;
     background: #ffffff;
     border-radius: 22px;
-    // transition: background-color 400ms cubic-bezier(0.5, 0, 0.3, 1);
+    transition: background-color 400ms cubic-bezier(0.5, 0, 0.3, 1);
 
-    // &:hover,
-    // &:focus {
-    //   background-color: #ecebeb;
-    // }
+    &:hover,
+    &:focus {
+      background-color: #ecebeb;
+    }
   }
 }
 
@@ -154,9 +155,10 @@
 
 .hero {
   background-color: #ffb8ca;
-  padding-top: 110px;
+  // padding-top: 110px;
   padding-bottom: 160px;
   position: relative;
+  padding-top: 198px;
   @media screen and (min-width: 768px) {
     // padding-top: 15px;
     padding-top: 99px;
@@ -261,9 +263,15 @@
   background-color: #d41443;
   color: #ffffff;
   margin-right: 8px;
+  transition: background-color 400ms cubic-bezier(0.5, 0, 0.3, 1);
+
   @media screen and (min-width: 1280px) {
     width: 102px;
     margin-right: 17px;
+  }
+  &:hover,
+  &:focus {
+    background-color: #ecebeb;
   }
 }
 
@@ -271,8 +279,14 @@
   width: 83px;
   color: #d41443;
   background-color: #ffffff;
+  transition: background-color 400ms cubic-bezier(0.5, 0, 0.3, 1);
+
   @media screen and (min-width: 1280px) {
     width: 138px;
+  }
+  &:hover,
+  &:focus {
+    background-color: #ecebeb;
   }
 }
 
@@ -424,7 +438,7 @@
     // z-index: 1;
     width: 284px;
     right: 0;
-    top: -10px;
+    top: 83px;
   }
 
   @media screen and (min-width: 768px) {
