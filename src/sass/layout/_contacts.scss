@@ -1,7 +1,8 @@
 .our-contacts {
-    padding-top: 86px;
+    padding-top: 234px;
     padding-bottom: 113px;
     background-color: #FFF5F6;
+    position: relative;
 }
 
 .contacts:not(:last-child) {
@@ -12,6 +13,19 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    transform: translateY(-320px);
+}
+
+.contacts-text-tel:hover,
+.contacts-list-text:hover {
+    color: #D41342;
+    transition-timing-function: 400ms cubic-bezier(0.5, 0, 0.3, 1);
+}
+
+.contacts-text-tel:focus,
+.contacts-list-text:focus {
+    color: #D41342;
+    transition-timing-function: 400ms cubic-bezier(0.5, 0, 0.3, 1);
 }
 
 .contacts-list-item {
@@ -24,6 +38,13 @@
     padding-bottom: 43px;
     padding-left: 20px;
     padding-right: 21px;
+    cursor: pointer;
+}
+
+.contacts-list-item:hover,
+.contacts-list-item:focus {
+    transform: scale(120%);
+    transition-timing-function: 5000ms;
 }
 
 .contacts-list-item:not(:last-child) {
@@ -71,7 +92,7 @@
 }
 
 .contacts-text {
-    width: 179px;
+    width: 188px;
     height: 36px;
     font-weight: 500;
     font-size: 12px;
@@ -146,6 +167,9 @@
 
 @media screen and (min-width:768px) {
     .contacts-list {
+        transform: translateY(-312px);
+    }
+    .contacts-list {
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -194,6 +218,9 @@
 
 @media screen and (min-width:1200px) {
     .contacts-list {
+        transform: translateY(-330px);
+    }
+    .contacts-list {
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -201,11 +228,12 @@
     .contacts-text-tel::before {
         width: 234px;
         bottom: 55px;
+        bottom: 50px;
     }
     .contacts-text::after {
         width: 234px;
         left: -10px;
-        top: 112px;
+        top: 80px;
         left: 1px;
     }
     .contacts-list-item {
@@ -233,7 +261,7 @@
         height: 28px;
     }
     .contacts-text {
-        width: 243px;
+        width: 260px;
         height: 100%;
         font-size: 16px;
         line-height: 1.81;
@@ -256,5 +284,14 @@
     .contacts-list-text {
         font-size: 16px;
         line-height: 1.81;
+    }
+    .our-contacts {
+        background-image: url(../images/contacts/contacts-bg-desctop.png);
+        background-size: 1280px 382px;
+        background-repeat: no-repeat;
+    }
+    .contacts-title {
+        display: block;
+        text-align: center;
     }
 }
