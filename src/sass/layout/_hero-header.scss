@@ -73,15 +73,50 @@
   color: #ffffff;
   position: relative;
   z-index: 10;
+  transition: color 400ms cubic-bezier(0.5, 0, 0.3, 1);
+
+  &:hover,
+  &:focus {
+    color: #d41443;
+  }
 }
 
 .header-nav-list__link.current {
   color: #d41443;
 }
 
+.header-btn-buy {
+  display: none;
+
+  @media screen and (min-width: 768px) {
+    position: relative;
+    z-index: 0;
+    display: block;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.31;
+    text-align: center;
+    color: #d41443;
+    width: 160px;
+    height: 44px;
+    background: #ffffff;
+    border-radius: 22px;
+    transition: background-color 400ms cubic-bezier(0.5, 0, 0.3, 1);
+    &:hover,
+    &:focus {
+      background-color: #ecebeb;
+    }
+  }
+}
+
+.header-btn-arrow {
+  fill: #d41443;
+  margin-left: 12px;
+}
+
 .header-menu-open {
   position: relative;
-  z-index: 10;
+  z-index: 0;
   width: 20px;
   height: 12px;
   @media screen and (min-width: 768px) {
@@ -97,7 +132,6 @@
   height: 1px;
   background: #d41443;
   display: block;
-  // transition: 0.5s ease-in-out;
 }
 
 .header-btn-burger-line,
@@ -121,52 +155,122 @@
   }
 }
 
-.header-btn-buy {
-  display: none;
+.burger-is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: none;
+}
+
+.header-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: opacity 250ms, visibility 250ms;
+}
+
+.header-burger-menu {
+  width: 250px;
+  height: 100vh;
+  padding: 60px 21px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 100;
+  background-color: #e17992;
 
   @media screen and (min-width: 768px) {
-    position: relative;
-    z-index: 10;
-    display: block;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.31;
-    text-align: center;
-    color: #d41443;
-    width: 160px;
-    height: 44px;
-    background: #ffffff;
-    border-radius: 22px;
-    transition: background-color 400ms cubic-bezier(0.5, 0, 0.3, 1);
-
-    &:hover,
-    &:focus {
-      background-color: #ecebeb;
-    }
+    width: 254px;
+  }
+  @media screen and (min-width: 1280px) {
+    display: none;
   }
 }
 
-.header-btn-arrow {
-  fill: #d41443;
-  margin-left: 12px;
+.header-menu-close {
+  position: absolute;
+  right: 28px;
+  top: 23px;
+  width: 14px;
+  height: 14px;
+  padding: 0;
+
+  &:before,
+  &:after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    content: ' ';
+    height: 20px;
+    width: 1px;
+    background-color: #ffffff;
+  }
+  &:before {
+    transform: rotate(45deg);
+  }
+  &:after {
+    transform: rotate(-45deg);
+  }
 }
 
+.header-burger-btn-buy {
+  margin-bottom: 32px;
+  width: 209px;
+  position: relative;
+  z-index: 10;
+  display: block;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.31;
+  text-align: center;
+  color: #d41443;
+  height: 44px;
+  background: #ffffff;
+  border-radius: 22px;
+  transition: background-color 400ms cubic-bezier(0.5, 0, 0.3, 1);
+
+  &:hover,
+  &:focus {
+    background-color: #ecebeb;
+  }
+}
+
+.burger-nav-item:not(:last-child) {
+  margin-bottom: 22px;
+}
+
+.burger-nav-link {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.25;
+  display: flex;
+  color: #ffffff;
+  transition: color 400ms cubic-bezier(0.5, 0, 0.3, 1);
+
+  &:hover,
+  &:focus {
+    color: #d41443;
+  }
+}
+
+.burger-nav-link.current {
+  color: #d41443;
+}
 // ------------HERO-------------------------
 
 .hero {
   background-color: #ffb8ca;
-  // padding-top: 110px;
   padding-bottom: 160px;
   position: relative;
   padding-top: 198px;
   @media screen and (min-width: 768px) {
-    // padding-top: 15px;
     padding-top: 99px;
 
     padding-bottom: 28px;
   }
   @media screen and (min-width: 1280px) {
-    // padding-top: 84px;
     padding-top: 172px;
     padding-bottom: 45px;
   }
@@ -206,7 +310,7 @@
   text-transform: uppercase;
   color: #ffffff;
   position: relative;
-  z-index: 10;
+  z-index: 9;
   @media screen and (min-width: 768px) {
     font-size: 22px;
     line-height: 1.13;
@@ -248,7 +352,7 @@
   line-height: 1.25;
   text-align: center;
   position: relative;
-  z-index: 10;
+  z-index: 9;
 
   @media screen and (min-width: 1280px) {
     font-size: 14px;
@@ -271,7 +375,7 @@
   }
   &:hover,
   &:focus {
-    background-color: #ecebeb;
+    background-color: #c7133e;
   }
 }
 
@@ -340,6 +444,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: background-color 400ms cubic-bezier(0.5, 0, 0.3, 1);
+
+  &:hover,
+  &:focus {
+    background-color: #d41443;
+  }
+
   @media screen and (min-width: 1280px) {
     width: 26px;
     height: 26px;
@@ -350,6 +461,12 @@
   @media screen and (min-width: 768px) {
     fill: #d41443;
     width: 7px;
+    transition: fill 400ms cubic-bezier(0.5, 0, 0.3, 1);
+
+    .hero-info-btn:hover &,
+    .hero-info-btn:focus & {
+      fill: #ffffff;
+    }
   }
   @media screen and (min-width: 1280px) {
     width: 10px;
@@ -378,7 +495,7 @@
   letter-spacing: 0.04em;
   text-align: right;
   position: relative;
-  z-index: 10;
+  z-index: 9;
   color: #d41443;
   @media screen and (min-width: 1280px) {
     font-size: 46px;
@@ -469,7 +586,7 @@
   @media screen and (min-width: 768px) {
     display: block;
     position: absolute;
-    z-index: 11;
+    z-index: 9;
     bottom: -28px;
     right: 34px;
     width: 168px;
