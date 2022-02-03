@@ -1,0 +1,164 @@
+<header class="header">
+  <div class="container">
+    <a href="" class="header-logo-wrap link">
+      <picture>
+        <source
+          media="(min-width:1280px)"
+          srcset="/images/hero/logo@1x.png 1x, /images/hero/logo@2x.png 2x"
+        />
+        <img src="/images/hero/logo@1x.png" alt="logo" class="header-logo" />
+      </picture>
+    </a>
+
+    <nav class="header-nav">
+      <ul class="header-nav-list list">
+        <li class="header-nav-list__item">
+          <a href="#" class="header-nav-list__link link current">Home</a>
+        </li>
+        <li class="header-nav-list__item">
+          <a href="#about" class="header-nav-list__link link">About us</a>
+        </li>
+        <li class="header-nav-list__item">
+          <a href="#about" class="header-nav-list__link link">How it’s made?</a>
+        </li>
+        <li class="header-nav-list__item">
+          <a href="#products" class="header-nav-list__link link">Our products</a>
+        </li>
+        <li class="header-nav-list__item">
+          <a href="#contacts" class="header-nav-list__link link">Contact</a>
+        </li>
+      </ul>
+    </nav>
+
+    <button type="button" class="header-menu-open header-btn">
+      <span class="header-btn-burger-line"></span>
+    </button>
+
+    <button type="button" class="header-btn-buy header-btn">
+      Buy now
+      <svg class="header-btn-arrow" width="5" height="9">
+        <use href="./images/symbol-defs.svg#icon-button-about"></use>
+      </svg>
+    </button>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="hero-left-wrap">
+      <div class="hero-title-wrap">
+        <h1 class="hero-title">ice cream made with <span class="hero-title-item">passion</span></h1>
+      </div>
+      <div class="hero-buttons">
+        <a href="#products" class="hero-btn-link-prod link" target="_blank">Products</a>
+
+        <a href="#about" class="hero-btn-link-info link" target="_blank">How it’s made?</a>
+      </div>
+      <div class="hero-info">
+        <div class="hero-info-img">
+          <picture>
+            <source
+              srcset="
+          /images/hero/hero-moloko-desc@1x.png 1x
+          /images/hero/hero-moloko-desc@2x.png 2x"
+              media="(max-width: 1280px)"
+            />
+            <source
+              media="(max-width: 768px)"
+              srcset="
+          /images/hero/hero-moloko-tab@1x.png 1x
+          /images/hero/hero-moloko-tab@2x.png 2x"
+            />
+
+            <img src="/images/hero/hero-moloko-desc@1x.png" alt="milk" />
+          </picture>
+        </div>
+        <div class="hero-info-wrap">
+          <p class="hero-info-text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et
+          </p>
+          <button type="button" class="hero-info-btn">
+            <svg class="hero-info-arrow">
+              <use href="./images/symbol-defs.svg#icon-arrow-right"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="hero-right-wrap">
+      <ul class="hero-info-right list">
+        <li class="hero-info-right-item">
+          <p class="hero-right-count">16</p>
+          <p class="hero-right-description">cafes</p>
+        </li>
+        <li class="hero-info-right-item">
+          <p class="hero-right-count">23</p>
+          <p class="hero-right-description">food trucks</p>
+        </li>
+      </ul>
+    </div>
+    <div class="hero-ellipse">
+      <picture>
+        <source
+          media="(min-width: 768px)"
+          srcset="./images/hero/hero-ellipse@1x.png 1x, ./images/hero/hero-ellipse@2x.png 2x"
+        />
+        <img src="./images/hero/hero-ellipse@1x.png" alt="ellips" />
+      </picture>
+    </div>
+    <div class="hero-ellipse-mobile">
+      <picture>
+        <source
+          media="(max-width: 767px)"
+          srcset="
+            ./images/hero/hero-ellipse-mobile@1x.png 1x,
+            ./images/hero/hero-ellipse-mobile@1x.png 2x
+          "
+        />
+        <img src="./images/hero/hero-ellipse-mobile@1x.png" alt="ellips" />
+      </picture>
+    </div>
+
+    <div class="hero-icecreame">
+      <picture>
+        <source
+          srcset="
+        /images/hero/hero-icecream-desc@1x.png 1x
+        /images/hero/hero-icecream-desc@2x.png 2x"
+          media="(max-width: 1280px)"
+        />
+
+        <source
+          media="(max-width: 768px)"
+          srcset="
+        /images/hero/hero-icecream-tab@1x.png 1x
+        /images/hero/hero-icecream-tab@2x.png 2x"
+        />
+
+        <source media="(max-width: 480px)" srcset=" /images/hero/hero-icecream-tel@1x.png 1x
+        /images/hero/hero-icecream-tel@2x.png 2x"" />
+
+        <img src="/images/hero/hero-icecream-desc@1x.png" alt="icecreame" />
+      </picture>
+    </div>
+
+    <div class="hero-girl">
+      <picture>
+        <source
+          srcset="
+        /images/hero/hero-girl-desc@1x.png 1x
+        /images/hero/hero-girl-desc@2x.png 2x"
+          media="(max-width: 1280px)"
+        />
+        <source
+          media="(max-width: 768px)"
+          srcset="
+        /images/hero/hero-girl-tab@1x.png 1x
+        /images/hero/hero-girl-tab@2x.png 2x"
+        />
+        <img src="/images/hero/hero-girl-desc@1x.png" alt="girl with ice creame" />
+      </picture>
+    </div>
+  </div>
+</section>
