@@ -3,10 +3,6 @@
   padding-bottom: 170px;
 }
 
-.slider {
-  text-align: center;
-}
-
 .reviews-photo {
   width: 85px;
   height: 85px;
@@ -14,44 +10,121 @@
   margin-right: auto;
   margin-bottom: 29px;
   border-radius: 50%;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 19px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    margin-bottom: 15px;
+  }
+}
+
+.slider {
+  position: relative;
 }
 
 .slider__box {
   position: relative;
-  background-color: #fafafa;
-  padding: 43px 66px 26px 57px;
 }
 
-.reviews__text {
-  position: relative;
+.slider__text-wrapper {
+  background-color: #fafafa;
+  padding: 44px 50px 16px;
   z-index: 2;
+  position: relative;
+}
+
+.slider__box::after {
+  position: absolute;
+  content: '';
+  width: 32px;
+  height: 4px;
+  left: 50%;
+  transform: translate(-50%);
+  z-index: 10;
+  bottom: -30px;
+  background-image: url(../images/reviews/points.svg);
+}
+
+.slider__text-wrapper::before {
+  position: absolute;
+  content: '';
+  width: 54px;
+  height: 40px;
+  background-image: url(../images/reviews/quotes.svg);
+  top: 28px;
+  left: 61px;
+  z-index: -2;
+
+  @media screen and (min-width: 768px) {
+    top: 30px;
+    left: 40px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    top: 32px;
+    left: 50px;
+  }
+}
+
+.slider__text {
   font-weight: 500;
   font-size: 12px;
   line-height: 2.55;
+  padding: 0 18px;
+  background-image: repeating-linear-gradient(to top, #e1e1e1 0px 1px, transparent 1px 31px);
   text-align: center;
+
+  @media screen and (min-width: 768px) {
+    font-size: 14px;
+    line-height: 2.16;
+  }
+
+  @media screen and (min-width: 1280px) {
+    font-size: 16px;
+    line-height: 1.86;
+  }
 }
 
-.slider__inner {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  padding: 71px 50px 20px;
+.swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
 }
 
-.slider__gradient {
-  width: 100%;
-  height: 100%;
-  background-image: linear-gradient(
-    180deg,
-    #e1e1e1 1.61%,
-    #fafafa 0,
-    #fafafa 50%,
-    #e1e1e1 0,
-    #e1e1e1 51.61%,
-    #fafafa 0,
-    #fafafa
-  );
-  background-size: 62px 60px;
+.swiper-pagination-bullet-active {
+  background-image: url(../images/reviews/home.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: transparent;
+  border-radius: 0;
+}
+
+.swiper-slide {
+  height: 450px;
+
+  @media screen and (min-width: 768px) {
+    height: 340px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    height: 320px;
+  }
+}
+
+.slider__name {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.86;
+  text-align: center;
+  margin-top: 52px;
+
+  @media screen and (min-width: 768px) {
+    margin-top: 42px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    margin-top: 34px;
+  }
 }
