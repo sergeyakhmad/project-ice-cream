@@ -186,3 +186,114 @@
   margin-left: 14px;
   fill: #d41443;
 }
+
+// -----------------------modal-about
+
+.about-backdrop {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba($color: #ffffff, $alpha: 0.75);
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  transition: visibility 600ms, opacity 600ms;
+  &.is-hidden .modal {
+    transition: transform 600ms;
+    transform: translate(-50%, -50%) scale(0.5);
+  }
+}
+
+.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.about-modal {
+  width: 80vw;
+  min-height: 80vh;
+  @media screen and (min-width: 480px) {
+    width: 400px;
+  }
+  @media screen and (min-width: 768px) {
+    width: 650px;
+  }
+  background-color: #e17992;
+  border-radius: 25px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding: 40px 25px;
+  transition: transform 500ms;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.about-close-modal {
+  width: 14px;
+  height: 14px;
+  background-color: transparent;
+  border: 0px;
+  position: absolute;
+  top: 25px;
+  right: 40px;
+  cursor: pointer;
+  transition: transform 400ms cubic-bezier(0.5, 0, 0.3, 1);
+  &:hover,
+  &:focus {
+    transform: translate(-25%, 0%) scale(1.5);
+  }
+}
+
+.about-modal-title {
+  font-family: Titan One;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #d41443;
+  margin-bottom: 40px;
+  @media screen and (min-width: 768px) {
+    font-size: 28px;
+  }
+}
+
+.about-modal-text {
+  font-family: Titan One;
+  position: relative;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.29;
+  color: #ffe7e7;
+  transition: background-color 400ms cubic-bezier(0.5, 0, 0.3, 1);
+  @media screen and (min-width: 768px) {
+    font-size: 16px;
+  }
+  & p:hover:after {
+    background-color: #d41443;
+    opacity: 50%;
+  }
+  & p {
+    margin-bottom: 15px;
+  }
+  & p::after {
+    content: '';
+    overflow: hidden;
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background-color: transparent;
+    transition: background-color opacity 400ms cubic-bezier(0.5, 0, 0.3, 1);
+  }
+}
+
+.about-close-modal-icon {
+  fill: #fff5f6;
+  transition: 400ms cubic-bezier(0.5, 0, 0.3, 1);
+  &:hover,
+  &:focus {
+    fill: #d41443;
+  }
+}
