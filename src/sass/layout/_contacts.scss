@@ -1,6 +1,5 @@
 .our-contacts {
     padding-top: 234px;
-    padding-bottom: 113px;
     background-color: #FFF5F6;
     position: relative;
 }
@@ -294,4 +293,31 @@
         display: block;
         text-align: center;
     }
+}
+
+.franchise-btn {
+    margin-top: 10px;
+}
+
+.location-btn,
+.franchise-btn {
+    display: block;
+    margin: 0 auto;
+    width: 161px;
+    height: 44px;
+    background: #FFFFFF;
+    border-radius: 22px;
+}
+
+.location,
+.franchise {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 1.31;
+    color: #D41443;
+}
+
+.location-btn:hover,
+.location-btn:focus {
+    color: white;
 }
