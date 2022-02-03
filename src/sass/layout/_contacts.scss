@@ -1,5 +1,5 @@
 .our-contacts {
-    padding-top: 234px;
+    padding-top: 170px;
     background-color: #FFF5F6;
     position: relative;
 }
@@ -38,6 +38,7 @@
     padding-left: 20px;
     padding-right: 21px;
     cursor: pointer;
+    position: relative;
 }
 
 .contacts-list-item:hover,
@@ -295,29 +296,48 @@
     }
 }
 
-.franchise-btn {
-    margin-top: 10px;
-}
-
-.location-btn,
-.franchise-btn {
+.location-btn {
+    text-align: center;
     display: block;
     margin: 0 auto;
     width: 161px;
     height: 44px;
+    border-color: #FFFFFF;
     background: #FFFFFF;
     border-radius: 22px;
-}
-
-.location,
-.franchise {
     font-weight: bold;
     font-size: 16px;
     line-height: 1.31;
     color: #D41443;
+    border: none;
+    position: relative;
+}
+
+.location-btn-fill {
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    width: 161px;
+    height: 44px;
+    border-color: #FFFFFF;
+    background: #FFFFFF;
+    border-radius: 22px;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 1.31;
+    color: #D41443;
+    border: none;
+    position: relative;
 }
 
 .location-btn:hover,
 .location-btn:focus {
-    color: white;
+    background-color: #D41443;
+    color: #FFFFFF;
+}
+
+.location-btn-fill:hover,
+.location-btn-fill:focus {
+    background-color: #D41443;
+    color: #FFFFFF;
 }
