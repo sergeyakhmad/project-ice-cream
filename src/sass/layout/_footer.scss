@@ -1,16 +1,19 @@
 .footer {
-  padding-top: 56px;
+  padding-top: 0;
   background-color: #fff5f6;
   @media screen and (min-width: 768px) {
-    padding-top: 79px;
+    padding-top: 7px;
   }
   @media screen and (min-width: 1280px) {
-    padding-top: 83px;
+    padding-top: 0;
   }
 }
 
-.footer__container {
+.footer-bottom {
   border-bottom: 1px solid #e1e1e1;
+}
+
+.footer__container {
   @media screen and (min-width: 768px) {
     display: flex;
     justify-content: space-between;
