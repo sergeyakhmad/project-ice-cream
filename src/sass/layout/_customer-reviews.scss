@@ -1,6 +1,16 @@
 .reviews {
   padding-top: 80px;
-  padding-bottom: 170px;
+  padding-bottom: 86px;
+
+  @media screen and (min-width: 768px) {
+    padding-top: 81px;
+    padding-bottom: 119px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    padding-top: 83px;
+    padding-bottom: 132px;
+  }
 }
 
 .reviews-photo {
