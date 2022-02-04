@@ -16,7 +16,7 @@
           <a href="#" class="header-nav-list__link link current">Home</a>
         </li>
         <li class="header-nav-list__item">
-          <a href="#about" class="header-nav-list__link link">About us</a>
+          <a href="#aboutus" class="header-nav-list__link link">About us</a>
         </li>
         <li class="header-nav-list__item">
           <a href="#about" class="header-nav-list__link link">How it’s made?</a>
@@ -51,14 +51,16 @@
             <use href="./images/symbol-defs.svg#icon-button-about"></use>
           </svg>
         </button>
-        <button class="header-menu-close header-btn"></button>
+        <button class="header-menu-close header-btn">
+          <span class="header-btn-close-line"></span>
+        </button>
         <nav class="burger-nav">
           <ul class="burger-list list">
             <li class="burger-nav-item">
               <a href="./index.html" class="burger-nav-link link current"> Home</a>
             </li>
             <li class="burger-nav-item">
-              <a href="#about" class="burger-nav-link link"> About us</a>
+              <a href="#aboutus" class="burger-nav-link link"> About us</a>
             </li>
             <li class="burger-nav-item">
               <a href="#about" class="burger-nav-link link"> How it’s made?</a>
@@ -83,27 +85,29 @@
         <h1 class="hero-title">ice cream made with <span class="hero-title-item">passion</span></h1>
       </div>
       <div class="hero-buttons">
-        <a href="#products" class="hero-btn-link-prod link"">Products</a>
+        <a href="#products" class="hero-btn-link-prod link">Products</a>
 
-        <a href="#about" class="hero-btn-link-info link"">How it’s made?</a>
+        <a href="#about" class="hero-btn-link-info link">How it’s made?</a>
       </div>
       <div class="hero-info">
         <div class="hero-info-img">
           <picture>
             <source
               srcset="
-          /images/hero/hero-moloko-desc@1x.png 1x
-          /images/hero/hero-moloko-desc@2x.png 2x"
+                ./images/hero/hero-moloko-desc@1x.png 1x,
+                ./images/hero/hero-moloko-desc@2x.png 2x
+              "
               media="(max-width: 1280px)"
             />
             <source
               media="(max-width: 768px)"
               srcset="
-          /images/hero/hero-moloko-tab@1x.png 1x
-          /images/hero/hero-moloko-tab@2x.png 2x"
+                ./images/hero/hero-moloko-tab@1x.png 1x,
+                ./images/hero/hero-moloko-tab@2x.png 2x
+              "
             />
 
-            <img src="/images/hero/hero-moloko-desc@1x.png" alt="milk" class="hero-img" />
+            <img src="./images/hero/hero-moloko-desc@1x.png" alt="milk" class="hero-img" />
           </picture>
         </div>
         <div class="hero-info-wrap">
@@ -157,40 +161,43 @@
       <picture>
         <source
           srcset="
-        /images/hero/hero-icecream-desc@1x.png 1x
-        /images/hero/hero-icecream-desc@2x.png 2x"
+            ./images/hero/hero-icecream-desc@1x.png 1x,
+            ./images/hero/hero-icecream-desc@2x.png 2x
+          "
           media="(max-width: 1280px)"
         />
 
         <source
           media="(max-width: 768px)"
           srcset="
-        /images/hero/hero-icecream-tab@1x.png 1x
-        /images/hero/hero-icecream-tab@2x.png 2x"
+            ./images/hero/hero-icecream-tab@1x.png 1x,
+            ./images/hero/hero-icecream-tab@2x.png 2x
+          "
         />
 
-        <source media="(max-width: 480px)" srcset=" /images/hero/hero-icecream-tel@1x.png 1x
-        /images/hero/hero-icecream-tel@2x.png 2x"" />
+        <source
+          media="(max-width: 480px)"
+          srcset="
+            ./images/hero/hero-icecream-tel@1x.png 1x,
+            ./images/hero/hero-icecream-tel@2x.png 2x
+          "
+        />
 
-        <img src="/images/hero/hero-icecream-desc@1x.png" alt="icecreame" />
+        <img src="./images/hero/hero-icecream-desc@1x.png" alt="icecreame" />
       </picture>
     </div>
 
     <div class="hero-girl">
       <picture>
         <source
-          srcset="
-        /images/hero/hero-girl-desc@1x.png 1x
-        /images/hero/hero-girl-desc@2x.png 2x"
+          srcset="./images/hero/hero-girl-desc@1x.png 1x, ./images/hero/hero-girl-desc@2x.png 2x"
           media="(max-width: 1280px)"
         />
         <source
           media="(max-width: 768px)"
-          srcset="
-        /images/hero/hero-girl-tab@1x.png 1x
-        /images/hero/hero-girl-tab@2x.png 2x"
+          srcset="./images/hero/hero-girl-tab@1x.png 1x, ./images/hero/hero-girl-tab@2x.png 2x"
         />
-        <img src="/images/hero/hero-girl-desc@1x.png" alt="girl with ice creame" />
+        <img src="./images/hero/hero-girl-desc@1x.png" alt="girl with ice creame" />
       </picture>
     </div>
   </div>
